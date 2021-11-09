@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Home msg="Welcome to Home!"/>
-    <Article/>
+    <Header/>
+    <router-view></router-view>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import Article from './components/Article.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Home,
-    Article
+    Header,
+    Footer
   }
 }
 </script>
