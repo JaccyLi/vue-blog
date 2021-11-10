@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container mt-5">
     <h3>Article</h3>
     <input v-model="aid">
     &nbsp;&nbsp;
@@ -33,7 +33,13 @@ export default {
                     'Access-Control-Allow-Origin': '*'
                 }
             })
-            this.articleContent = res.data.data
+            const data = res.data.data
+            if (data !== null && data !== undefined) {
+                this.articleContent = res.data.data
+            } else {
+                this.articleContent = {content: res.data.msg}
+            }
+
         },
     }
 }
