@@ -3,7 +3,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import Home from '../pages/home/Home'
-import Article from '../pages/article/Article'
+import List from '../pages/blog/list/List'
+import About from '../pages/about/About.vue'
+import Portfolio from '../pages/portfolio/Portfolio.vue'
+import Contact from '../pages/contact/Contact.vue'
 
 export default new VueRouter({
     routes: [
@@ -12,8 +15,20 @@ export default new VueRouter({
             component: Home
         },
         {
-            path: '/article',
-            component: Article 
+            path: '/list',
+            component: List 
+        },
+        {
+            path: '/about',
+            component: About 
+        },
+        {
+            path: '/portfolio',
+            component: Portfolio 
+        },
+        {
+            path: '/contact',
+            component: Contact 
         },
 
     ]
