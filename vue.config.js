@@ -30,13 +30,12 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   devServer: {
-    port: 8080,
-    open: true,
-    overlay: {
-      warnings: false,
-      errors: true
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        //pathRewrite: { '^/api': '' },
+      },
     },
-    before: ''
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

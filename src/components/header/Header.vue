@@ -1,25 +1,28 @@
 <template>
-  <div>
-	<h1>suosuoli.cn</h1>
-	<nav>
+<div class="container">
+	<header>
+	<!-- <p>suosuoli.cn</p> -->
+		<p>
+			<a href="#">
+				<router-link to="/home" class="button">Home</router-link>
+			</a>
+		</p>
+		<p>
 		<a href="#">
-			<router-link to="/home">Home</router-link>
+			<router-link to="/articles" class="button">Articles</router-link>
+		</a>
+		</p>
+		<a href="#">
+			<router-link to="/portfolio" class="button">Portfolio</router-link>
 		</a>
 		<a href="#">
-			<router-link to="/list">Blog</router-link>
+			<router-link to="/contact" class="button">Contact</router-link>
 		</a>
 		<a href="#">
-			<router-link to="/about">About</router-link>
+			<router-link to="/about" class="button">About</router-link>
 		</a>
-		<a href="#">
-			<router-link to="/portfolio">Portfolio</router-link>
-		</a>
-		<a href="#">
-			<router-link to="/contact">Contact</router-link>
-		</a>
-		<div class="animation start-home"></div>
-	</nav>
-  </div>
+	</header>
+</div>
 </template>
 
 <script>
@@ -38,104 +41,47 @@ export default {
 </script>
 
 <style scoped>
-nav {
-	margin: 27px auto 0;
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
 
-	position: relative;
-	width: 590px;
-	height: 50px;
-	background-color: #34495e;
-	border-radius: 8px;
-	font-size: 0;
-}
-nav a {
-	line-height: 50px;
-	height: 100%;
-	font-size: 15px;
-	display: inline-block;
-	position: relative;
-	z-index: 1;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	color: white;
-	cursor: pointer;
-}
-nav .animation {
-	position: absolute;
-	height: 100%;
-	top: 0;
-	z-index: 0;
-	transition: all .5s ease 0s;
-	border-radius: 8px;
-}
-a:nth-child(1) {
-	width: 100px;
-}
-a:nth-child(2) {
-	width: 110px;
-}
-a:nth-child(3) {
-	width: 100px;
-}
-a:nth-child(4) {
-	width: 160px;
-}
-a:nth-child(5) {
-	width: 120px;
-}
-nav .start-home, a:nth-child(1):hover~.animation {
-	width: 100px;
-	left: 0;
-	background-color: #1abc9c;
-}
-nav .start-about, a:nth-child(2):hover~.animation {
-	width: 110px;
-	left: 100px;
-	background-color: #e74c3c;
-}
-nav .start-blog, a:nth-child(3):hover~.animation {
-	width: 100px;
-	left: 210px;
-	background-color: #3498db;
-}
-nav .start-portefolio, a:nth-child(4):hover~.animation {
-	width: 160px;
-	left: 310px;
-	background-color: #9b59b6;
-}
-nav .start-contact, a:nth-child(5):hover~.animation {
-	width: 120px;
-	left: 470px;
-	background-color: #e67e22;
+* {
+  font-family: 'Lato', sans-serif !important;
+  box-sizing: border-box;
 }
 
-body {
-	font-size: 12px;
-	font-family: sans-serif;
-	background: #2c3e50;
+header {
+  width: 100%;
+  height: 75px;
+  background: rgb(68, 68, 68);
 }
-h1 {
-	text-align: center;
-	margin: 40px 0 40px;
-	text-align: center;
-	font-size: 30px;
-	color: #ecf0f1;
-	text-shadow: 2px 2px 4px #000000;
-	font-family: 'Cherry Swash', cursive;
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+  color: #FFF;
+  line-height: 36px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.button:hover {
+  color: #40A4e8;
+  border: 1px solid #4094e8;
 }
 
 p {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: #ecf0f1;
-    font-family: 'Cherry Swash',cursive;
-    font-size: 16px;
-}
-
-span {
-    color: #2BD6B4;
+  font-size: 30px;
+  float: left;
+  line-height: 67px;
+  color: #FFF;
+  margin-left: 20px;
 }
 </style>

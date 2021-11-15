@@ -1,7 +1,6 @@
 <template>
 <div>
   <img src="./png/logo.png" alt="suosuoli.cn">
-  <h3>{{ this.name }}</h3>
 </div>
 </template>
 
